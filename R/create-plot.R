@@ -7,11 +7,13 @@ library("tidyverse")
 df = read_csv("data/weatherAUS.csv")
 
 # Create a scatter plot of Humidity9am and Temp9am
-# for the location "Sydney"
+# a location
+
+city = "Brisbane"
 
 scatter_plot = 
 df %>%
-  filter(Location == "Sydney") %>%
+  filter(Location == city) %>%
   ggplot(aes(x = Temp9am, y = Humidity9am)) + 
   geom_point()
 
