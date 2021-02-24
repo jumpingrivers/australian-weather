@@ -15,7 +15,7 @@ scatter_plot =
   df %>%
   filter(Location == "Brisbane") %>%
   ggplot(aes(x = Temp9am, y = Humidity9am)) +
-  geom_point(aes = "green") +
+  geom_point(color = "purple") +
   labs(title = "Humidity and Temperatur for Brisbane") +
   theme_minimal() +
   facet_wrap(~WindDir9am)
@@ -30,7 +30,7 @@ ggsave(filename = "graphics/scatter-temp-humidity.png", plot = scatter_plot)
 time_series =
   df %>%
   filter(Location == city) %>%
-  ggplot(aes(x = Date, y = Temp9am)) +
+  ggplot(aes = "purple") +
   geom_line()
 ggsave(filename = "graphics/timeseries-rainfall.png",
        plot = scatter_plot)
