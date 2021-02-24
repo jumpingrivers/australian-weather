@@ -16,7 +16,7 @@ df %>%
   filter(Location == city) %>%
   ggplot(aes(x = Temp9am, y = Humidity9am)) + 
   ggtitle('Sydney weather') +
-  geom_point(colour = "purple") + 
+  geom_point(colour = "green") + 
   labs(caption = "Copyright by the Australian Commonwealth Bureau of Meteorology") + 
   labs(xlab = "Temperature", ylab = "Humidity") +
   theme_minimal()
