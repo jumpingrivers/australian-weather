@@ -34,3 +34,5 @@ time_series =
   geom_line()
 ggsave(filename = "graphics/timeseries-rainfall.png",
        plot = scatter_plot)
+
+
