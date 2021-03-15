@@ -9,14 +9,14 @@ df = read_csv("data/weatherAUS.csv")
 # Create a scatter plot of Humidity9am and Temp9am
 # a location
 
-city = "Sydney"
+city = "Wollongong"
 
 scatter_plot = 
 df %>%
   filter(Location == city) %>%
   ggplot(aes(x = Temp9am, y = Humidity9am)) + 
   geom_point(colour="red")+
-  labs(title="Humidity by Temp in Sydney")+
+  labs(title= city)+
   theme_minimal()
 
 # Save the plot in graphics/
