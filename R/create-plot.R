@@ -16,7 +16,7 @@ df %>%
   filter(Location == city) %>%
   ggplot(aes(x = Temp9am, y = Humidity9am)) + 
   geom_point(colour="red")+
-  labs(title= city)+
+  labs(title= city, x="Temperature", y="Humidity")+
   theme_minimal()
 
 # Save the plot in graphics/
