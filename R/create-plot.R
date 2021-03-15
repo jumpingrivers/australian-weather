@@ -17,7 +17,8 @@ df %>%
   ggplot(aes(x = Temp9am, y = Humidity9am)) + 
   geom_point(colour = "red") +
   labs(title = city,
-       caption = "Copyright by the Australian Commonwealth Bureau of Meteorology")
+       caption = "Copyright by the Australian Commonwealth Bureau of Meteorology") +
+  theme_minimal()
 
 # Save the plot in graphics/
 ggsave(filename = "graphics/scatter-temp-humidity.png", plot = scatter_plot)
