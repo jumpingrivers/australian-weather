@@ -33,3 +33,15 @@ bar_plot = df %>%
 
 # Save the plot in graphics/
 ggsave(filename = "graphics/average_rainfall.png", plot = bar_plot)
+
+
+##Creating a new time series plot
+
+time_series =
+  df %>%
+  filter(Location == city) %>%
+  ggplot(aes(x = Date, y = Temp9am)) +
+  geom_line()
+ggsave(filename = "graphics/timeseries-rainfall.png",
+       plot = scatter_plot)
+
