@@ -5,4 +5,8 @@ Mirrored from https://gitlab.com/jumpingrivers-public/australian-weather to http
 
 Doing this training.
 
+<<<<<<< HEAD
 This is my new branch
+=======
+Another change from the remote version of master branch
+>>>>>>> master
