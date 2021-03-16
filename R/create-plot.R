@@ -23,3 +23,13 @@ df %>%
 
 # Save the plot in graphics/
 ggsave(filename = "graphics/scatter-temp-humidity.png", plot = scatter_plot)
+
+# Time series plot
+time_series =
+  df %>%
+  filter(Location == city) %>%
+  ggplot(aes(x = Date, y = Temp9am)) +
+  geom_line()
+
+ggsave(filename = "graphics/timeseries-rainfall.png",
+       plot = scatter_plot)
