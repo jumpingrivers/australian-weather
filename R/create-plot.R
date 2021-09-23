@@ -17,7 +17,8 @@ df %>%
   ggplot(aes(x = Temp9am, y = Humidity9am)) + 
   geom_point(colour = "red")+
   ggtitle("Brisbane Humidity vs Temperature") +
-  xlab("Temp") + ylab("Humidity")
+  xlab("Temp") + ylab("Humidity")+
+  theme_classic()
 
 scatter_plot
 
