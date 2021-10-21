@@ -15,7 +15,8 @@ scatter_plot =
 df %>%
   filter(Location == city) %>%
   ggplot(aes(x = Temp9am, y = Humidity9am)) + 
-  geom_point(colour = "red")
+  geom_point(colour = "red") +
+  theme_minimal()
 
 bar_plot = df %>%
   ggplot(aes(x = WindGustDir)) +
