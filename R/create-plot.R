@@ -19,7 +19,7 @@ scatter_plot = df %>%
 
 bar_plot = df %>% 
   ggplot(aes(x = WindGustDir))+
-  geom_bar(fill = "blue")
+  geom_bar(fill = "skyblue")
 
 bar_plot
 
