@@ -23,6 +23,14 @@ bar_plot = df %>%
 
 bar_plot
 
+time_series =
+  df %>%
+  filter(Location == city) %>%
+  ggplot(aes(x = Date, y = Temp9am)) +
+  geom_line()
+ggsave(filename = "graphics/timeseries-rainfall.png",
+       plot = time_series)
+
 # Save the plot in graphics/
 ggsave(filename = "graphics/scatter-temp-humidity.png", plot = scatter_plot)
 ggsave(filename = "graphics/wind_gust_ddir_bar.png", plot = bar_plot)
