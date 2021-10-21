@@ -13,7 +13,7 @@ city = "Brisbane"
 
 scatter_plot = 
 df %>%
-  filter(Location == city) %>%
+  filter(Location == branch_edit) %>%
   ggplot(aes(x = Temp9am, y = Humidity9am)) + 
   geom_point(color="red") +
   theme_minimal()
