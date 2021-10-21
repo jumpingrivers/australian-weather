@@ -21,7 +21,6 @@ bar_plot =
   df %>%
   ggplot(aes(x=WindGustDir)) +geom_bar(color="blue",fill="red")
 
-
 # Save the plot in graphics/
 ggsave(filename = "graphics/scatter-temp-humidity.png", plot = scatter_plot)
-ggsave(filename = "graphics/BarWind.png", plot = scatter_plot)
+ggsave(filename = "graphics/BarWind.png", plot = bar_plot)
