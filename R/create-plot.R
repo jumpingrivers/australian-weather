@@ -24,3 +24,4 @@ bar_plot = df %>%
 # Save the plot in graphics/
 ggsave(filename = "graphics/scatter-temp-humidity.png", plot = scatter_plot)
 ggsave(filename = "graphics/wind_gust_dir_bar.png", plot = bar_plot)
+
