@@ -18,5 +18,14 @@ df %>%
   geom_point(colour = "red") + 
   labs(title = "Scatter plot - Humidity vs temperature")
 
+scatter_plot_MinMax = 
+  df %>%
+  filter(Location == city) %>%
+  ggplot(aes(x = MinTemp, y = MaxTemp)) + 
+  geom_point(colour = "red") + 
+  labs(title = "Scatter plot - Min vs Max")  
+
 # Save the plot in graphics/
 ggsave(filename = "graphics/scatter-temp-humidity.png", plot = scatter_plot)
+
+ggsave(filename = "graphics/scatter_plot_MinMax.png", plot = scatter_plot_MinMax)
