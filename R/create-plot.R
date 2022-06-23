@@ -18,7 +18,8 @@ df %>%
   geom_point(colour = "red")+ 
   theme_light()+
   labs(title = paste0("Scatter plot of Humidity9am and Temp9am in ",city),
-                                   subtitle = "Plot for training")
+                                   subtitle = "Plot for training")+ 
+  facet_wrap(~WindDir9am)
 
 # Save the plot in graphics/
 ggsave(filename = "graphics/scatter-temp-humidity.png", plot = scatter_plot)
