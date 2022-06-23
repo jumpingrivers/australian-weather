@@ -16,6 +16,7 @@ df %>%
   filter(Location == city) %>%
   ggplot(aes(x = Temp9am, y = Humidity9am)) + 
   geom_point(colour = "red") + 
+  geom_smooth(method = "lm") +
   labs(title = "Scatter plot - Humidity vs temperature") + 
   theme_minimal()
 
@@ -24,6 +25,7 @@ scatter_plot_MinMax =
   filter(Location == city) %>%
   ggplot(aes(x = MinTemp, y = MaxTemp)) + 
   geom_point(colour = "red") + 
+  geom_smooth(method = "lm") +
   labs(title = "Scatter plot - Min vs Max")  + 
   theme_minimal()
 
