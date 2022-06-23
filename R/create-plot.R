@@ -70,7 +70,8 @@ time_series =
   df %>%
   filter(Location == city) %>%
   ggplot(aes(x = Date, y = Temp9am)) +
-  geom_line()
+  geom_line(col=SU_cols("orange"))
+
 ggsave(filename = "graphics/timeseries-rainfall.png",
        plot = time_series)
 
