@@ -3,4 +3,4 @@ A simple data science project exploring the weather in Australia. Used in our "G
 
 Mirrored from https://gitlab.com/jumpingrivers-public/australian-weather to https://github.com/jumpingrivers/australian-weather, edit in GitLab only.
 
-author: Maria - using for training Stacey
+author: Maria -  training Stacey
