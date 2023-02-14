@@ -22,3 +22,16 @@ df %>%
 
 # Save the plot in graphics/
 ggsave(filename = "graphics/scatter-temp-humidity.png", plot = scatter_plot)
+
+#### Add time sereies plot
+
+avg_rainfall <- df %>%
+  group_by(Location) %>%
+  summarise(avg_rainfall = mean(Rainfall, na.rm = TRUE)) %>%
+  slice(1:20)
+
+avg_rainfall_plot <- ggplot(avg_rainfall, aes(x = avg_rainfall, y = Location)) + 
+  geom_col()
+
+# Save the plot in graphics/
+ggsave(filename = "graphics/avg-rainfall-location.png", plot = avg_rainfall_plot)
