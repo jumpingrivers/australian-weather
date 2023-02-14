@@ -16,8 +16,11 @@ df %>%
   filter(Location == city) %>%
   ggplot(aes(x = Temp9am, y = Humidity9am)) + 
   geom_point(color = "red")+
-  labs(caption = "Copyright by the Australian Commonwealth Bureau of Meteorology")+
-  labs(xlab = "Temperature", ylab = "Humidity")
+  labs(caption = "Copyright by the Australian Commonwealth Bureau of Meteorology",
+       title = "Humidity and Temperatur for Brisbane",
+       xlab = "Temperature", ylab = "Humidity")+
+  theme_minimal() +
+  facet_wrap(~WindDir9am)
 
 # Save the plot in graphics/
 ggsave(filename = "graphics/scatter-Brisbane.png", plot = scatter_plot)
