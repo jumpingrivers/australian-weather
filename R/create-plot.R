@@ -35,3 +35,12 @@ avg_rainfall_plot <- ggplot(avg_rainfall, aes(x = avg_rainfall, y = Location)) +
 
 # Save the plot in graphics/
 ggsave(filename = "graphics/avg-rainfall-location.png", plot = avg_rainfall_plot)
+
+
+time_series =
+  df %>%
+  filter(Location == city) %>%
+  ggplot(aes(x = Date, y = Temp9am)) +
+  geom_line()
+ggsave(filename = "graphics/timeseries-rainfall.png",
+       plot = time_series)
