@@ -23,5 +23,13 @@ df %>%
   ) +
   theme_minimal()
 
+bar_chart = 
+  df %>% 
+  group_by(Location) %>% 
+  summarise(average_rainfall = mean(Rainfall, na.rm = TRUE)) %>% 
+  ggplot(aes(y = Location, x = average_rainfall)) + 
+  geom_col()
+ggsave(filename = "graphics/barchart-avg-rainfall.png", plot = bar_chart)
+
 # Save the plot in graphics/
 ggsave(filename = "graphics/scatter-temp-humidity.png", plot = scatter_plot)
