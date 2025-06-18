@@ -6,7 +6,7 @@ library("tidyverse")
 
 df = read_csv("data/weatherAUS.csv")
 
-# Create a point plot of Humidity9am and Temp9am a location
+# Create a point plot of Humidity9am and Temp9am a location hi
 
 city = "Brisbane"
 
